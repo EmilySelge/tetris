@@ -2,6 +2,9 @@ import { Block } from "./Block.js";
 
 class SBlock extends Block {
 
+    y;
+    x;
+
     shapes = [
         {   
             'height': 2,

@@ -75,3 +75,13 @@ body {
     font-size: 1.6rem;
     padding: 0.3rem 0.8rem;
 }
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+#game-over {
+    font-size: 1rem;
+}

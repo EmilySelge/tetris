@@ -38,6 +38,12 @@ document.addEventListener('keydown', e => {
                 gameBoard.draw(currentBlock);
             }
             break;
+        case ' ':
+            while ( currentBlock.canMoveDown(gameBoard) ) {
+                currentBlock.moveDown();
+                gameBoard.draw(currentBlock);
+            }
+            break;
     }
 });
 
@@ -49,6 +55,12 @@ function run () {
         currentBlock.moveDown();
     } else {
         currentBlock.stop(gameBoard);
+        gameBoard.removeFullRows();
+
+        if ( currentBlock.isOutOfBounds() ) {
+            clearInterval(intervalId)
+            gameBoard.gameOver()
+        }
         currentBlock = generateNewBlock();
     }
 

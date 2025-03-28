@@ -2,6 +2,10 @@ import { Block } from "./Block.js";
 
 class ZBlock extends Block {
 
+
+    y;
+    x;
+
     shapes = [
         {   
             'height': 2,

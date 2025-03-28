@@ -1,15 +1,15 @@
 class GameBoard {
     
     gameBoardDiv = document.getElementById('game-board');
-    width = 12;
-    height = 24;
+    width = 10;
+    height = 18;
 
     state = Array.from(new Array(this.height), () => Array.from(new Array(this.width), () => ''));
 
     constructor () {
 
-        this.gameBoardDiv.style.gridTemplateColumns = `repeat(${this.width}, 24px)`;
-        this.gameBoardDiv.style.gridTemplateRows = `repeat(${this.height}, 24px)`;
+        this.gameBoardDiv.style.gridTemplateColumns = `repeat(${this.width}, 30px)`;
+        this.gameBoardDiv.style.gridTemplateRows = `repeat(${this.height}, 30px)`;
     
     }
 
@@ -45,6 +45,21 @@ class GameBoard {
         
     }
 
+    gameOver() {
+        const gameOverDiv = document.getElementById('game-over');
+    
+        if (gameOverDiv) {
+            gameOverDiv.classList.remove('hidden'); 
+        }
+    }
+
+    RemoveFullRows() {
+        this.state.forEach((row, i) => {
+            // work in progress
+            row.every(cell => cell)
+        })
+    }
+    
 
 }
 

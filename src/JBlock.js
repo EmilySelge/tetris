@@ -2,6 +2,9 @@ import { Block } from "./Block.js";
 
 class JBlock extends Block {
 
+    y;
+    x;
+
     shapes = [
         {   
             'height': 3,
