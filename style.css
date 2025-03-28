@@ -1,23 +1,27 @@
 body {
     margin: 0;
+    background-color: #f9f7f7;
+    font-family: 'Poppins', sans-serif;
 }
 
 #game-board > div {
-    background-color: rgb(234, 234, 234);
+    background-color: #eaeaea;
     font-size: 16px;
-
+    border-radius: 8px;
 }
 
 
 #game-board {
-
     display: grid;
-    grid-gap: 1px;
-    border: 14px solid white;
-    border-radius: 2%;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
- 
+    grid-template-columns: repeat(12, 24px);
+    grid-template-rows: repeat(24, 24px);
+    grid-gap: 2px;
+    border: 14px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f9f7f7;
 }
+
 
 .main {
     display: flex;
@@ -28,12 +32,46 @@ body {
 }
 
 
-
 #game-board div.s-block {
-    background-color: red;
+    background-color: #f06c64;
+    border-radius: 4px;
+}
+
+#game-board div.z-block {
+    background-color: #6abf69; 
+  border-radius: 4px;
+}
+
+#game-board div.l-block {
+    background-color: #ff9e34;
+   border-radius: 4px;
+}
+
+#game-board div.j-block {
+    background-color: #4c83ff;
+ border-radius: 4px;
+}
+
+#game-board div.o-block {
+    background-color: #f9e04f;
+   border-radius: 4px;
+}
+
+#game-board div.t-block {
+    background-color: #9e4eff;
+   border-radius: 4px;
+}
+
+#game-board div.i-block {
+    background-color: #00c9c7;
+ border-radius: 4px;
 }
 
 
-#game-board div.z-block {
-    background-color: green;
+.score-container {
+    
+    width: -webkit-fill-available;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    padding: 0.3rem 0.8rem;
 }
