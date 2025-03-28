@@ -59,6 +59,6 @@ function run () {
 function generateNewBlock () {
     
     const i = Math.floor(Math.random() * allBlocks.length);
-    return new allBlocks[i];
+    return new allBlocks[i](gameBoard);
 
 }

@@ -1,9 +1,5 @@
 class Block {
 
-    y = 10;
-    x = 5;
-
-
     shapeIndex = 0;
 
     moveDown () {
@@ -30,10 +26,13 @@ class Block {
             const y = el[0] + this.y + 1;
             const x = el[1] + this.x;
 
-            if ( gameBoard.state[y][x] ) {
-                ret = false;
+            if ( y >= 0) {
+                if ( gameBoard.state[y][x] ) {
+                    ret = false;
+                }
+    
             }
-
+            
         });
 
         return ret;

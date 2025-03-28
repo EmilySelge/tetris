@@ -1,6 +1,10 @@
 import { Block } from "./Block.js";
+import { GameBoard } from "./GameBoard.js";
 
 class OBlock extends Block {
+
+    y;
+    x;
 
     shapes = [
         {   
@@ -13,9 +17,11 @@ class OBlock extends Block {
     class = 'o-block';
 
 
-    constructor () {
+    constructor (gb) {
 
+        super();    
         this.y = 0 - this.shapes[0].height;
+        this.x = Math.floor((gb.width - this.shapes[0].width) / 2)
 
     
     }
